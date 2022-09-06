@@ -1,0 +1,17 @@
+header{
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    width: 100vw;
+    margin: 1rem 0rem;
+
+    >h1{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 2px solid black;
+        width: 512px;
+        height: 64px;
+        font-size: 30px;
+    }
+}

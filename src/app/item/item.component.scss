@@ -1,0 +1,63 @@
+div {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 512px;
+    height: 64px;
+
+    label {
+        display: block;
+        padding: 12px 0 12px 48px;
+    }
+
+    input {
+        z-index: 1;
+        height: 35px;
+        left: 1.5%;
+        top: 25%;
+        opacity: 0;
+        position: absolute;
+        width: 35px;
+    }
+
+    input+label::before {
+        border: 2px solid;
+        content: "";
+        height: 30px;
+        left: 1.5%;
+        top: 25%;
+        position: absolute;
+        width: 30px;
+    }
+
+    input+label::after {
+        content: "";
+        border: 4px solid;
+        border-left: 0;
+        border-top: 0;
+        height: 15px;
+        left: 3.5%;
+        top: 30%;
+        opacity: 0;
+        position: absolute;
+        transform: rotate(45deg);
+        width: 12px;
+    }
+
+    input:checked+label::after {
+        opacity: 1 !important;
+    }
+
+    input:checked+label {
+        text-decoration: line-through;
+    }
+
+    input:hover {
+        cursor: pointer;
+    }
+
+    #btnDel:hover {
+        cursor: pointer;
+        color: red;
+    }
+}

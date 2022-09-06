@@ -1,0 +1,31 @@
+<main>
+    <link
+    rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0"
+  />
+    <div class="todo-input">
+        <input
+          #inputTask
+          (keyup.enter)="addTask(inputTask.value)"
+          (keyup.enter)="inputTask.value = ''"
+          type="text"
+          id="inputTask"
+          placeholder="to-do item"
+        />
+        <button
+          (click)="addTask(inputTask.value)"
+          (click)="inputTask.value = ''"
+          id="btnTask"
+        >
+          ADD
+        </button>
+    </div>
+
+    <div class="todo-output">
+        <ul class="todo-container">
+          <li #todoItem class="todo-item" *ngFor="let task of tasks">
+            <app-item [(tasks)]="tasks" [task]="task"></app-item>
+          </li>
+        </ul>
+      </div>
+</main>
